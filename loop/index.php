@@ -9,7 +9,7 @@
 </head>
 <style>
     table {
-        border: 1px solid black;
+        /* border: 1px solid black; */
         border-collapse: collapse;
         width: 100%;
     }
@@ -28,14 +28,33 @@
         border: 3px solid black; 
         border-collapse: separate; 
         border-spacing: 0; 
-        width: 70%;
+        width: 50%;
         margin: auto;
-}
+    }
 
     .table99 td, .table99 th {
         border: 1px solid black; 
         padding: 8px; 
-}
+    }
+
+    .table99 td:hover {
+        background-color:rgb(228, 113, 113);
+        border: 20px;
+        font-size:20px;
+    }
+
+    .tabletrangle {
+        width: 25;
+        height: 25%;
+        margin: auto;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    .tabletrangle td {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+    }
 </style>
 
 <body>
@@ -106,25 +125,88 @@
                     </ul>
                 </td>
             </tr>
-            <tr>
-                <td>
+            <table class="table99">
                 <?php
-                echo "<table class='table99'>";
                     for ($i = 1; $i <=9 ; $i++) {
                         echo "<tr>";
+
                         for ($j = 1; $j <= 9; $j++) {
                             echo "<td>";
                             echo $j . " * " . $i . " = " . ($i * $j);
                             echo "</td>";
                         }
+                        
                         echo "</tr>";    
                     }
-                echo "</table>";
                 ?>
+            </table>
+            
+            <p>&nbsp;<br></p>
+            <p>&nbsp;<br></p>
+            <p><hr></p>
+            <p>&nbsp;<br></p>
+            <p>&nbsp;<br></p>
+            <table class="table99">
+                <ul>
+                    <li>以交叉計算結果呈現的九九乘法表</li>
+                </ul>
+                <tr>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <?php
+                    
+                    for ($i = 1; $i <=9 ; $i++) {
+                        echo "<tr>";
+                        echo "<td>" . $i . "</td>";
+                        for ($j = 1; $j <= 9; $j++) {
+                            
+                            echo "<td>";
+                            echo  ($i * $j);
+                            echo "</td>";
+                        }
+                        
+                        echo "</tr>";    
+                    }
+                ?>
+            </table>
+            <p>&nbsp;<br></p>
+            <p>&nbsp;<br></p>
+            <p><hr></p>
+            <p>&nbsp;<br></p>
+            <p>&nbsp;<br></p>
+            <tr>
+                <td>
+                    <p class="smalltitle">以 * 符號為基礎在網頁上排列出下列圖形:</p>
+                    <ul>
+                        <li>直角三角型</li>
+                        <li>倒直角三角型</li>
+                        <li>正三角型</li>
+                        <li>菱型</li>
+                        <li>矩形</li>
+                        <li>內含對角線的矩形</li>
+                        <!-- <li></li> -->
+                    </ul>
                 </td>
             </tr>
-            
-            
+            <tr class="tabletrangle">
+                <td >直角三角形</td>
+                <td >倒直角三角形</td>
+                <td >正三角形</td>
+            </tr>
+            <p>&nbsp;<br></p>
+            <p>&nbsp;<br></p>
+            <p><hr></p>
+            <p>&nbsp;<br></p>
+            <p>&nbsp;<br></p>
         </table>
     </div>
 </body>
