@@ -25,22 +25,23 @@
     }
 
     .table99 {
-        border: 3px solid black; 
-        border-collapse: separate; 
-        border-spacing: 0; 
+        border: 3px solid black;
+        border-collapse: separate;
+        border-spacing: 0;
         width: 50%;
         margin: auto;
     }
 
-    .table99 td, .table99 th {
-        border: 1px solid black; 
-        padding: 8px; 
+    .table99 td,
+    .table99 th {
+        border: 1px solid black;
+        padding: 8px;
     }
 
     .table99 td:hover {
-        background-color:rgb(228, 113, 113);
+        background-color: rgb(228, 113, 113);
         border: 20px;
-        font-size:20px;
+        font-size: 20px;
     }
 
     .tabletrangle {
@@ -48,12 +49,18 @@
         height: 25%;
         margin: auto;
         border: 1px solid black;
-        border-collapse: collapse;
+        /* border-collapse: collapse; */
     }
+
     .tabletrangle td {
         width: 20px;
         height: 20px;
         text-align: center;
+        
+    }
+
+    body {
+        font-family: "Courier New", Courier, monospace;
     }
 </style>
 
@@ -83,24 +90,24 @@
             <tr>
                 <td>
                     <?php
-                        $n = 30;
-                        for ($i = 1; $i <= $n; $i+=2) {
-                            if ($i + 2 > $n) { 
-                                echo $i;
-                            } else {
-                                echo $i . ",";
-                            }
+                    $n = 30;
+                    for ($i = 1; $i <= $n; $i += 2) {
+                        if ($i + 2 > $n) {
+                            echo $i;
+                        } else {
+                            echo $i . ",";
                         }
-                        echo "<br>";
-                        $n = 60;
-                        for ($i = 10; $i <= $n; $i+=10) {
-                            if ($i + 10 > $n) {
-                                echo $i;
-                            } else {
-                                echo $i . ",";
-                            }
+                    }
+                    echo "<br>";
+                    $n = 60;
+                    for ($i = 10; $i <= $n; $i += 10) {
+                        if ($i + 10 > $n) {
+                            echo $i;
+                        } else {
+                            echo $i . ",";
                         }
-                        echo "<br>";
+                    }
+                    echo "<br>";
 
                     $n = 100;
                     for ($i = 3; $i <= $n; $i++) {
@@ -127,23 +134,25 @@
             </tr>
             <table class="table99">
                 <?php
-                    for ($i = 1; $i <=9 ; $i++) {
-                        echo "<tr>";
+                for ($i = 1; $i <= 9; $i++) {
+                    echo "<tr>";
 
-                        for ($j = 1; $j <= 9; $j++) {
-                            echo "<td>";
-                            echo $j . " * " . $i . " = " . ($i * $j);
-                            echo "</td>";
-                        }
-                        
-                        echo "</tr>";    
+                    for ($j = 1; $j <= 9; $j++) {
+                        echo "<td>";
+                        echo $j . " * " . $i . " = " . ($i * $j);
+                        echo "</td>";
                     }
+
+                    echo "</tr>";
+                }
                 ?>
             </table>
-            
+
             <p>&nbsp;<br></p>
             <p>&nbsp;<br></p>
-            <p><hr></p>
+            <p>
+                <hr>
+            </p>
             <p>&nbsp;<br></p>
             <p>&nbsp;<br></p>
             <table class="table99">
@@ -163,24 +172,26 @@
                     <td>9</td>
                 </tr>
                 <?php
-                    
-                    for ($i = 1; $i <=9 ; $i++) {
-                        echo "<tr>";
-                        echo "<td>" . $i . "</td>";
-                        for ($j = 1; $j <= 9; $j++) {
-                            
-                            echo "<td>";
-                            echo  ($i * $j);
-                            echo "</td>";
-                        }
-                        
-                        echo "</tr>";    
+
+                for ($i = 1; $i <= 9; $i++) {
+                    echo "<tr>";
+                    echo "<td>" . $i . "</td>";
+                    for ($j = 1; $j <= 9; $j++) {
+
+                        echo "<td>";
+                        echo ($i * $j);
+                        echo "</td>";
                     }
+
+                    echo "</tr>";
+                }
                 ?>
             </table>
             <p>&nbsp;<br></p>
             <p>&nbsp;<br></p>
-            <p><hr></p>
+            <p>
+                <hr>
+            </p>
             <p>&nbsp;<br></p>
             <p>&nbsp;<br></p>
             <tr>
@@ -197,14 +208,44 @@
                     </ul>
                 </td>
             </tr>
-            <tr class="tabletrangle">
-                <td >直角三角形</td>
-                <td >倒直角三角形</td>
-                <td >正三角形</td>
-            </tr>
+            <table class="tabletrangle">
+                <tr>
+                    <td>直角三角形</td>
+                    <td>倒直角三角形</td>
+                    <td>正三角形</td>
+                </tr>
+                <tr>
+                    <td>
+                        <?php
+                            $n = 5;
+                            for ($i = 1; $i <= $n; $i++) {
+                                for($j=1; $j<=$n; $j++){
+                                    if ($j <= $i ){
+                                    echo "*" ;
+                                    }
+                                }
+                                echo "<br>";
+                            }
+                        ?>
+                    </td>
+                    <td> 
+                        <pre><?php
+                            $n = 5;
+                            for ($i = $n; $i >= 1; $i--) {
+                                for($j=1; $j <= $i; $j++){
+                                    echo "*" ;
+                                }
+                                echo "<br>";
+                            }
+                        ?></pre></td>
+                    <td></td>
+                </tr>
+            </table>
             <p>&nbsp;<br></p>
             <p>&nbsp;<br></p>
-            <p><hr></p>
+            <p>
+                <hr>
+            </p>
             <p>&nbsp;<br></p>
             <p>&nbsp;<br></p>
         </table>
